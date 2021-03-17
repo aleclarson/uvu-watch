@@ -19,6 +19,7 @@ async function uvu() {
     .slice(2)
     .filter(arg => arg !== '-w' && arg !== '--watch')
 
+  process.stdout.write('\x1B[2J\x1B[3J\x1B[H\x1Bc')
   try {
     await exec.async(cmd, argv, { stdio: 'inherit' })
   } catch {}
@@ -54,7 +55,6 @@ sade('uvu [dir] [pattern]')
           queued = true
           running = running.then(() => {
             queued = false
-            process.stdout.write('\x1B[2J\x1B[3J\x1B[H\x1Bc')
             return uvu()
           })
         }
