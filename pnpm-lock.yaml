@@ -1,0 +1,268 @@
+dependencies:
+  '@cush/exec': 1.6.4
+  filespy: 1.1.2
+  find-dependency: 1.3.0
+  kleur: 4.1.4
+  mini-debounce: 1.0.8
+  sade: 1.7.4
+devDependencies:
+  '@alloc/prettier-config': 1.0.0
+  '@types/node': 14.14.35
+  '@types/sade': 1.7.2
+  esbuild: 0.8.57
+  prettier: 2.2.1
+  rollup: 2.41.4
+  rollup-plugin-esbuild: 3.0.2_esbuild@0.8.57+rollup@2.41.4
+  rollup-plugin-preserve-shebang: 1.0.1
+  typescript: 4.2.3
+  uvu: 0.5.1
+lockfileVersion: 5.2
+packages:
+  /@alloc/prettier-config/1.0.0:
+    dev: true
+    resolution:
+      integrity: sha512-xm50V1qxSdTh1O1fKA+gqcU605YSnxfq6HwtYSFU3fRsKMFnUSuSOxqSAPI7y2sRxqPed2EIuGmNn107LVQM6g==
+  /@cush/exec/1.6.4:
+    dependencies:
+      shell-quote: 1.7.2
+      type-error: 1.0.3
+    dev: false
+    resolution:
+      integrity: sha512-fTP33B643TztazcMocteQJWFCLYzHznxVUdY/epsWm7/WfXF/QoSG+zXQ4AfwiBRuN5m0mgQ3pKmLRkdKnJrjQ==
+  /@parcel/watcher/2.0.0-alpha.10:
+    dependencies:
+      node-addon-api: 3.1.0
+      node-gyp-build: 4.2.3
+    dev: false
+    engines:
+      node: '>= 10.0.0'
+    requiresBuild: true
+    resolution:
+      integrity: sha512-8uA7Tmx/1XvmUdGzksg0+oN7uj24pXFFnKJqZr3L3mgYjdrL7CMs3PRIHv1k3LUz/hNRsb/p3qxztSkWz1IGZA==
+  /@rollup/pluginutils/4.1.0_rollup@2.41.4:
+    dependencies:
+      estree-walker: 2.0.2
+      picomatch: 2.2.2
+      rollup: 2.41.4
+    dev: true
+    engines:
+      node: '>= 8.0.0'
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0
+    resolution:
+      integrity: sha512-TrBhfJkFxA+ER+ew2U2/fHbebhLT/l/2pRk0hfj9KusXUuRXd2v0R58AfaZK9VXDQ4TogOSEmICVrQAA3zFnHQ==
+  /@types/mri/1.1.0:
+    dev: true
+    resolution:
+      integrity: sha512-fMl88ZoZXOB7VKazJ6wUMpZc9QIn+jcigSFRf2K/rrw4DcXn+/uGxlWX8DDlcE7JkwgIZ7BDH+JgxZPlc/Ap3g==
+  /@types/node/14.14.35:
+    dev: true
+    resolution:
+      integrity: sha512-Lt+wj8NVPx0zUmUwumiVXapmaLUcAk3yPuHCFVXras9k5VT9TdhJqKqGVUQCD60OTMCl0qxJ57OiTL0Mic3Iag==
+  /@types/sade/1.7.2:
+    dependencies:
+      '@types/mri': 1.1.0
+    dev: true
+    resolution:
+      integrity: sha512-qVHZ70gLk2tCAqRanVOBVKM8og7eBhnWx1cdHMj8J3t4QF+PzIS9+pzZWZEx9ghsO1DDeGOTgyq5aQd5Bt/2dw==
+  /binary-insert/1.2.1:
+    dev: false
+    resolution:
+      integrity: sha512-CGsSYzBUL/QqnmL4CTwLQnnVBj5RqPCmVifo5SnqTSbH5heFPtDijsIZJCKmOaXowaYUiiDOc+eZUjpU6NdpMg==
+  /dequal/2.0.2:
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-q9K8BlJVxK7hQYqa6XISGmBZbtQQWVXSrRrWreHC94rMt1QL/Impruc+7p2CYSYuVIUr+YCt6hjrs1kkdJRTug==
+  /diff/5.0.0:
+    dev: true
+    engines:
+      node: '>=0.3.1'
+    resolution:
+      integrity: sha512-/VTCrvm5Z0JGty/BWHljh+BAiw3IK+2j87NGMu8Nwc/f48WoDAC395uomO9ZD117ZOBaHmkX1oyLvkVM/aIT3w==
+  /esbuild/0.8.57:
+    dev: true
+    hasBin: true
+    requiresBuild: true
+    resolution:
+      integrity: sha512-j02SFrUwFTRUqiY0Kjplwjm1psuzO1d6AjaXKuOR9hrY0HuPsT6sV42B6myW34h1q4CRy+Y3g4RU/cGJeI/nNA==
+  /estree-walker/2.0.2:
+    dev: true
+    resolution:
+      integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==
+  /filespy/1.1.2:
+    dependencies:
+      '@parcel/watcher': 2.0.0-alpha.10
+      binary-insert: 1.2.1
+      glob-regex: 0.3.2
+      slash: 3.0.0
+    dev: false
+    resolution:
+      integrity: sha512-hwPgcgwNjPCWZFYJP4Jly1DwPxGT3iGo2bszVOv21/eXoEqJIJEpJDwlcL3RzyGtaFjwgJYt4iLppmWrWys+Vw==
+  /find-dependency/1.3.0:
+    dev: false
+    resolution:
+      integrity: sha512-3/jC4BIM4WvzO1b5m2QC1KPudgqcpTGGOA9lKMhQ9RUhGEvtS5oUGU2JlFWhhuFUK1I4MhrL66amf0qxkxhoIQ==
+  /fsevents/2.3.2:
+    dev: true
+    engines:
+      node: ^8.16.0 || ^10.6.0 || >=11.0.0
+    optional: true
+    os:
+      - darwin
+    resolution:
+      integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
+  /glob-regex/0.3.2:
+    dev: false
+    resolution:
+      integrity: sha512-m5blUd3/OqDTWwzBBtWBPrGlAzatRywHameHeekAZyZrskYouOGdNB8T/q6JucucvJXtOuyHIn0/Yia7iDasDw==
+  /joycon/3.0.1:
+    dev: true
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-SJcJNBg32dGgxhPtM0wQqxqV0ax9k/9TaUskGDSJkSFSQOEWWvQ3zzWdGQRIUry2j1zA5+ReH13t0Mf3StuVZA==
+  /jsonc-parser/3.0.0:
+    dev: true
+    resolution:
+      integrity: sha512-fQzRfAbIBnR0IQvftw9FJveWiHp72Fg20giDrHz6TdfB12UH/uue0D3hm57UB5KgAVuniLMCaS8P1IMj9NR7cA==
+  /kleur/4.1.4:
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-8QADVssbrFjivHWQU7KkMgptGTl6WAcSdlbBPY4uNF+mWr6DGcKrvY2w4FQJoXch7+fKMjj0dRrL75vk3k23OA==
+  /magic-string/0.25.7:
+    dependencies:
+      sourcemap-codec: 1.4.8
+    dev: true
+    resolution:
+      integrity: sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==
+  /mini-debounce/1.0.8:
+    dev: false
+    resolution:
+      integrity: sha512-EqUsV34zuw2N9UHjRl1bwaDiLe1d/P8AemSp/EbDjOsZ7gB+z+7F9wcJWqfU3QpPnHD1oKGe2n6Fw90QsLkBkA==
+  /mri/1.1.6:
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-oi1b3MfbyGa7FJMP9GmLTttni5JoICpYBRlq+x5V16fZbLsnL9N3wFqqIm/nIG43FjUFkFh9Epzp/kzUGUnJxQ==
+  /node-addon-api/3.1.0:
+    dev: false
+    resolution:
+      integrity: sha512-flmrDNB06LIl5lywUz7YlNGZH/5p0M7W28k8hzd9Lshtdh1wshD2Y+U4h9LD6KObOy1f+fEVdgprPrEymjM5uw==
+  /node-gyp-build/4.2.3:
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-MN6ZpzmfNCRM+3t57PTJHgHyw/h4OWnZ6mR8P5j/uZtqQr46RRuDE/P+g3n0YR/AiYXeWixZZzaip77gdICfRg==
+  /picomatch/2.2.2:
+    dev: true
+    engines:
+      node: '>=8.6'
+    resolution:
+      integrity: sha512-q0M/9eZHzmr0AulXyPwNfZjtwZ/RBZlbN3K3CErVrk50T2ASYI7Bye0EvekFY3IP1Nt2DHu0re+V2ZHIpMkuWg==
+  /prettier/2.2.1:
+    dev: true
+    engines:
+      node: '>=10.13.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
+  /rollup-plugin-esbuild/3.0.2_esbuild@0.8.57+rollup@2.41.4:
+    dependencies:
+      '@rollup/pluginutils': 4.1.0_rollup@2.41.4
+      esbuild: 0.8.57
+      joycon: 3.0.1
+      jsonc-parser: 3.0.0
+    dev: true
+    engines:
+      node: '>=12'
+    peerDependencies:
+      esbuild: '>=0.9.0'
+      rollup: '*'
+    resolution:
+      integrity: sha512-uq+oBCeLXF1m6g9V0qpqbPbgyq24aXBKF474BvqgxfNmTP6FZ+oVk5/pCWQ/2rfSNJs4IimNU/k0q8xMaa0iCA==
+  /rollup-plugin-preserve-shebang/1.0.1:
+    dependencies:
+      magic-string: 0.25.7
+    dev: true
+    resolution:
+      integrity: sha512-gk7ExGBqvUinhgrvldKHkAKXXwRkWMXMZymNkrtn50uBgHITlhRjhnKmbNGwAIc4Bzgl3yLv7/8Fhi/XeHhFKg==
+  /rollup/2.41.4:
+    dev: true
+    engines:
+      node: '>=10.0.0'
+    hasBin: true
+    optionalDependencies:
+      fsevents: 2.3.2
+    resolution:
+      integrity: sha512-f9IHfMO8p2Y8OdisI7Oj3oKkPuaQ6cgSwYqAi0TDvP3w2p+oX1VejX/w28a1h8WTnrapzfO5d4Uqhww+gL0b0g==
+  /sade/1.7.4:
+    dependencies:
+      mri: 1.1.6
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-y5yauMD93rX840MwUJr7C1ysLFBgMspsdTo4UVrDg3fXDvtwOyIqykhVAAm6fk/3au77773itJStObgK+LKaiA==
+  /shell-quote/1.7.2:
+    dev: false
+    resolution:
+      integrity: sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==
+  /slash/3.0.0:
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
+  /sourcemap-codec/1.4.8:
+    dev: true
+    resolution:
+      integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==
+  /totalist/2.0.0:
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-+Y17F0YzxfACxTyjfhnJQEe7afPA0GSpYlFkl2VFMxYP7jshQf9gXV7cH47EfToBumFThfKBvfAcoUn6fdNeRQ==
+  /type-error/1.0.3:
+    dev: false
+    resolution:
+      integrity: sha512-hlNA4NwwjtL9clb8nv+x/5C45uzxND+N+h+/y3z2dYdubGSmdtNtJjHVH4E68ZHR98Bkav4ACf1lmTZepc/4sg==
+  /typescript/4.2.3:
+    dev: true
+    engines:
+      node: '>=4.2.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-qOcYwxaByStAWrBf4x0fibwZvMRG+r4cQoTjbPtUlrWjBHbmCAww1i448U0GJ+3cNNEtebDteo/cHOR3xJ4wEw==
+  /uvu/0.5.1:
+    dependencies:
+      dequal: 2.0.2
+      diff: 5.0.0
+      kleur: 4.1.4
+      sade: 1.7.4
+      totalist: 2.0.0
+    dev: true
+    engines:
+      node: '>=8'
+    hasBin: true
+    resolution:
+      integrity: sha512-JGxttnOGDFs77FaZ0yMUHIzczzQ5R1IlDeNW6Wymw6gAscwMdAffVOP6TlxLIfReZyK8tahoGwWZaTCJzNFDkg==
+specifiers:
+  '@alloc/prettier-config': ^1.0.0
+  '@cush/exec': ^1.6.4
+  '@types/node': ^14.14.35
+  '@types/sade': ^1.7.2
+  esbuild: ^0.8.36
+  filespy: ^1.1.2
+  find-dependency: ^1.3.0
+  kleur: ^4.1.4
+  mini-debounce: ^1.0.8
+  prettier: ^2.0.5
+  rollup: ^2.38.1
+  rollup-plugin-esbuild: ^3.0.2
+  rollup-plugin-preserve-shebang: ^1.0.1
+  sade: ^1.7.4
+  typescript: ^4.0.0
+  uvu: ^0.5.1
