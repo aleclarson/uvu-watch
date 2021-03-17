@@ -13,13 +13,13 @@ if (!uvuPath) {
 
 const { version } = require(path.join(uvuPath, 'package.json'))
 
-async function uvu() {
+async function uvu(watch?: boolean) {
   const cmd = path.join(uvuPath, 'bin.js')
   const argv = process.argv
     .slice(2)
     .filter(arg => arg !== '-w' && arg !== '--watch')
 
-  process.stdout.write('\x1B[2J\x1B[3J\x1B[H\x1Bc')
+  watch && process.stdout.write('\x1B[2J\x1B[3J\x1B[H\x1Bc')
   try {
     await exec.async(cmd, argv, { stdio: 'inherit' })
   } catch {}
@@ -34,7 +34,7 @@ sade('uvu [dir] [pattern]')
   .option('-C, --cwd', 'The current directory to resolve from', '.')
   .option('-c, --color', 'Print colorized output', true)
   .action(async (_dir, _pattern, opts) => {
-    let running = uvu()
+    let running = uvu(opts.watch)
 
     if (opts.watch) {
       const { filespy } = require('filespy')
@@ -55,7 +55,7 @@ sade('uvu [dir] [pattern]')
           queued = true
           running = running.then(() => {
             queued = false
-            return uvu()
+            return uvu(true)
           })
         }
       })
