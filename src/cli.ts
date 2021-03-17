@@ -14,12 +14,12 @@ if (!uvuPath) {
 const { version } = require(path.join(uvuPath, 'package.json'))
 
 async function uvu(watch?: boolean) {
-  const cmd = path.join(uvuPath, 'bin.js')
-  const argv = process.argv
-    .slice(2)
-    .filter(arg => arg !== '-w' && arg !== '--watch')
-
-  watch && process.stdout.write('\x1B[2J\x1B[3J\x1B[H\x1Bc')
+  let cmd = path.join(uvuPath, 'bin.js')
+  let argv = process.argv.slice(2)
+  if (watch) {
+    argv = argv.filter(arg => arg !== '-w' && arg !== '--watch')
+    process.stdout.write('\x1B[2J\x1B[3J\x1B[H\x1Bc')
+  }
   try {
     await exec.async(cmd, argv, { stdio: 'inherit' })
   } catch {}
