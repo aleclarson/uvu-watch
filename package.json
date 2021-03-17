@@ -6,7 +6,8 @@
   "license": "MIT",
   "repository": "aleclarson/uvu-watch",
   "bin": {
-    "uvu": "dist/uvu-watch.js"
+    "uvu": "dist/uvu-watch.js",
+    "uvu-watch": "dist/uvu-watch.js"
   },
   "files": [
     "src",
