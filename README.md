@@ -6,6 +6,10 @@
 
 > Watch mode for [uvu](https://github.com/lukeed/uvu) test runner
 
+- Plug n play (identical to `uvu` CLI)
+- Works globally or locally
+- Uses [filespy](https://github.com/alloc/filespy) (an alternative to Chokidar) for [Watchman](https://facebook.github.io/watchman/) support, event throttling, native performance, and more!
+
 &nbsp;
 
 ## Local usage
