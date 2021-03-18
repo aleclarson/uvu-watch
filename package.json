@@ -11,7 +11,8 @@
   },
   "files": [
     "src",
-    "dist"
+    "dist",
+    "watch/{dist,*.ts}"
   ],
   "prettier": "@alloc/prettier-config",
   "scripts": {
