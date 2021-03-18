@@ -37,7 +37,7 @@ sade('uvu [dir] [pattern]')
   .option('-C, --cwd', 'The current directory to resolve from', '.')
   .option('-c, --color', 'Print colorized output', true)
   .action(async (_dir, _pattern, opts) =>
-    opts.watch ? require('watch').watch(opts, () => uvu(true)) : uvu()
+    opts.watch ? require('../watch').watch(opts, () => uvu(true)) : uvu()
   )
   .parse(process.argv)
 
@@ -45,6 +45,6 @@ sade('uvu [dir] [pattern]')
 declare global {
   interface NodeRequire {
     (m: 'kleur'): typeof import('kleur')
-    (m: 'watch'): typeof import('watch')
+    (m: '../watch'): typeof import('../watch')
   }
 }
