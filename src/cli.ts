@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 import findDependency from 'find-dependency'
+import { red, gray } from 'kleur'
 import exec from '@cush/exec'
 import sade from 'sade'
 import path from 'path'
 
 const uvuPath = findDependency('uvu')!
 if (!uvuPath) {
-  const { red } = require('kleur')
   console.error(red('[!]'), '"uvu" must be installed')
   process.exit(1)
 }
@@ -18,10 +18,13 @@ async function uvu(watch?: boolean) {
   let argv = process.argv.slice(2)
   if (watch) {
     argv = argv.filter(arg => arg !== '-w' && arg !== '--watch')
-    process.stdout.write('\x1B[2J\x1B[3J\x1B[H\x1Bc')
+    if (!process.env.CI) {
+      process.stdout.write('\x1B[2J\x1B[3J\x1B[H\x1Bc')
+    }
+    console.log(gray('$ uvu ' + argv.join(' ')) + '\n')
   }
   try {
-    await exec.async(cmd, argv, { stdio: 'inherit' })
+    await exec(cmd, argv, { stdio: 'inherit' })
   } catch {}
 }
 
@@ -33,48 +36,15 @@ sade('uvu [dir] [pattern]')
   .option('-r, --require', 'Additional module(s) to preload')
   .option('-C, --cwd', 'The current directory to resolve from', '.')
   .option('-c, --color', 'Print colorized output', true)
-  .action(async (_dir, _pattern, opts) => {
-    let running = uvu(opts.watch)
-
-    if (opts.watch) {
-      const { filespy } = require('filespy')
-      const { debounce } = require('mini-debounce')
-
-      const cwd = opts.cwd || process.cwd()
-      const spy = filespy(cwd, {
-        skip: ['.*', 'node_modules'].concat(opts.ignore || []),
-      })
-
-      // Ignore initial crawl events.
-      spy.on('ready', () => {
-        let queued = false
-        spy.on('all', debounce(queueRun, 100))
-
-        function queueRun() {
-          if (queued) return
-          queued = true
-          running = running.then(() => {
-            queued = false
-            return uvu(true)
-          })
-        }
-      })
-
-      // Ignore permission errors, but crash on others.
-      spy.on('error', err => {
-        if (err.code !== 'EACCES') {
-          process.emit('uncaughtException', err)
-        }
-      })
-    }
-  })
+  .action(async (_dir, _pattern, opts) =>
+    opts.watch ? require('watch').watch(opts, () => uvu(true)) : uvu()
+  )
   .parse(process.argv)
 
 // Provide types for `require` calls
 declare global {
   interface NodeRequire {
     (m: 'kleur'): typeof import('kleur')
-    (m: 'filespy'): typeof import('filespy')
-    (m: 'mini-debounce'): typeof import('mini-debounce')
+    (m: 'watch'): typeof import('watch')
   }
 }

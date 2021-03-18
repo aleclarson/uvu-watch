@@ -1,0 +1,9 @@
+{
+  "name": "watch",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/watch.js",
+  "devDependencies": {
+    "filespy": "^1.1.2"
+  }
+}
