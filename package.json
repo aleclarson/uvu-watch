@@ -32,6 +32,7 @@
     "@types/node": "^14.14.35",
     "@types/sade": "^1.7.2",
     "esbuild": "^0.8.36",
+    "indo": "^0.3.42",
     "prettier": "^2.0.5",
     "rollup": "^2.38.1",
     "rollup-plugin-esbuild": "^3.0.2",

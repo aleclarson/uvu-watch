@@ -1,4 +1,5 @@
 {
+  "ignore": ["watch"],
   "repos": {
     "fixtures/ms": {
       "url": "https://github.com/lukeed/ms.git"
