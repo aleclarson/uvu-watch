@@ -51,7 +51,7 @@ export async function watch(opts: Options, run: () => Promise<void>) {
 
   // This code runs when "test.sh" is executed in CI.
   if (process.env.CI && /\/ms$/.test(process.cwd())) {
-    setTimeout(() => exec.sync('touch test/* src/* package.json'), 500)
+    setTimeout(() => exec.sync('touch test/index.js src/index.js'), 500)
     setTimeout(() => process.exit(), 1000)
   }
 }
