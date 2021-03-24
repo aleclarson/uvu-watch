@@ -12,7 +12,8 @@
   "files": [
     "src",
     "dist",
-    "watch/{dist,*.ts}"
+    "watch/{dist,*.ts}",
+    "postinstall.sh"
   ],
   "prettier": "@alloc/prettier-config",
   "scripts": {
