@@ -6,7 +6,7 @@ if (process.cwd().includes('uvu-watch')) {
 }
 
 mkdirp('node_modules/.bin')
-fs.symlinkSync(
+symlink(
   '../uvu-watch/dist/uvu-watch.js',
   'node_modules/.bin/uvu'
 )
@@ -16,4 +16,11 @@ function mkdirp(dir) {
     mkdirp(path.dirname(dir))
     fs.mkdirSync(dir)
   }
+}
+
+function symlink(target, link) {
+  if (fs.existsSync(link)) {
+    fs.unlinkSync(link)
+  }
+  fs.symlinkSync(target, link)
 }
