@@ -19,7 +19,7 @@
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c && chmod +x dist/*.js",
-    "postinstall": "sh postinstall.sh",
+    "postinstall": "node postinstall.js",
     "prepare": "yarn build"
   },
   "dependencies": {
