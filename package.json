@@ -1,6 +1,6 @@
 {
   "name": "uvu-watch",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Watch mode for uvu test runner",
   "author": "Alec Larson",
   "license": "MIT",
